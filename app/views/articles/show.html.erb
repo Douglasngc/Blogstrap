@@ -1,9 +1,10 @@
-<h1> <%= @article.title %></h1>
 
-<p> <%= @article.body %> </p>
+      <article class="blog-post">
+        <h2 class="blog-post-title"><%= @article.title %></h2>
+        <p class="blog-post-meta"><%= data( @article.created_at) %></p>
 
-<ul>
-<li><%= link_to 'Edit', edit_article_path(@article) %></li>
-<li><%= link_to 'Destroy', article_path(@article),   data: { "turbo_method": :delete, turbo_confirm: "Are you sure?" } %></li>
-<li><%= link_to 'Voltar', root_path %></li>
-</ul>
+
+<%= link_to 'Edit', edit_article_path(@article), class:"btn btn-secondary" %>
+<%= button_to 'Destroy', article_path(@article), class:"btn btn-danger", method: :delete, data: { confirm: 'Tem certeza?' } %>
+<%= link_to 'Voltar', root_path, class:"btn btn-light" %>
+      </article>
