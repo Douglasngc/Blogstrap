@@ -75,3 +75,12 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "simple_form", "~> 5.2"
+
+gem "kaminari", "~> 1.2"
+
+# Gemfile
+
+gem 'pagination', '~> 0.3.3'
+

@@ -1,7 +1,10 @@
 
       <article class="blog-post">
         <h2 class="blog-post-title"><%= @article.title %></h2>
+
+
         <p class="blog-post-meta"><%= data( @article.created_at) %></p>
+          <h3 class="blog-post-body"><%= @article.body %></h3>
 
 
 <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-secondary" %>
